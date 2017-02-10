@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "5"
+before_script:
+  - npm install -g gulp
+  - npm install phantomjs
+  - npm install -g karma
+  - npm install -g eslint
+  - npm install
+after_script:
+  - gulp lint
+  - gulp test
